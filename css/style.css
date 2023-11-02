@@ -152,11 +152,10 @@ body {
 .order-label {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     margin-left: 20px;
     width: 90%;
     position: relative;
-
 }   
 .order-icon {
     position: absolute;
@@ -177,6 +176,7 @@ body {
     size: 12px;
     height: 14px;
     width: 34px;
+    font-size: small;
    
 }
 .order-title {
@@ -188,15 +188,79 @@ body {
     size: 16px;
     font-weight: 500;
     height: 24px;
-    
-
+    font-size:large;
+   
 }
 .order-title, .input-label {
     color: var(--NAVY-BLUE);
 }
+.order-input-textarea {
+    padding: 8px 16px;
+    border: 1px solid #2e2f42;
+    border-radius: 4px;
+    transition: 250ms;
+    transition-property: color, border-color, background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ }
+.accept-text {
+    color: #2E2F42;
+    font-size: 13px;
+    margin-left: 10px;
+}
+.accept-label {
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    }
+.accept-checkbox {
+   /* appearance: none; */
+   width: 19px;
+   height: 19px;
+   position: relative;
+   left: 23px;
+   opacity: 0;
+}
+.accept-icon {
+    fill: none;
+    border: 1px solid black;
+    border-radius: 2px;
+    transition:250ms;
+    transition-property: border-color, background-color, fill;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.accept-label .accept-checkbox:focus + .accept-icon,
+.accept-label .accept-checkbox:checked:focus + .accept-icon {
+    outline: 2px solid #212121;
+}
+.accept-label .accept-checkbox:checked + .accept-icon {
+    background-color: var(--IRIS);
+    border-color: var(--IRIS);
+    outline: none;
+    fill: var(--WHITE);
+    stroke: var(--WHITE);
+    stroke-width: 0.2;
+}
+.sendbtn-modal {
+    cursor: pointer;
+}
+.sendbtn-modal {
+    margin-top: 20px;
+    padding: 16px 32px;
+    background-color: var(--IRIS);
+    color: var(--WHITE);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border-color: transparent;
+    width: 169px;
+    height: 56px;
+}
+.sendbtn-modal:focus, .sendbtn-modal:hover {
+    background-color: var(--WHITE);
+    color: var(--IRIS);
+}
 .modal {
     width: 408px;
-    height: 584px;
+    height: 650px;
     background-color: var(--WHITE);
     border-radius: 4px;
 }
@@ -205,11 +269,13 @@ body {
     top: 20px;
     left: 170px;
     border-radius: 100px;
+    cursor: pointer;
 }
 .is-hidden {
     pointer-events: none;
     opacity: 0;
 }
+
 .popup {
     width: 100%;
     height: 100%;
@@ -290,6 +356,55 @@ li.staff {
     display: flex;
     gap: 120px;
 }
+.email-footer {
+   margin-top: -15px;
+   margin-left: 80px;
+}
+.email-footer-port {
+   margin-top: -15px;
+}
+.subs-footer {
+    color: var(--WHITE);
+}
+.subs-input {
+    border: 2px solid white;
+    background: none;
+    border-radius: 4px;
+    padding: 6px;
+    width: 264px;
+    background-color: none;
+    color: var(--WHITE);
+    height: 24px;
+}
+.subs-input:placeholder-shown {
+    color: var(--WHITE);
+}
+.email-btn {
+    margin-left: 15px;
+    color: var(--WHITE);
+    background-color: var(--IRIS);
+    border-radius: 4px;
+    padding: 8px 24px;
+    width: 165px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border: none;
+    font-size: medium;
+    cursor: pointer;
+}
+.email-btn:hover, .email-btn:focus {
+    color: var(--IRIS);
+    background-color: white;
+ }
+ .email-btn:hover svg, .email-btn:hover svg {
+    fill: var(--IRIS);
+ }
+.email-btn svg {
+    fill: var(--WHITE);
+}
+
 /*end of footer section*/
 
 /*icon styling*/
